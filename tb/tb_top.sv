@@ -8,7 +8,7 @@ module tb_top;
 //`define TASK_2
 //`define TASK_3
 //`define TASK_4
-//`define TASK_5
+`define TASK_5
 //`define TASK_6
 //`define TASK_7
 //`define TASK_8
