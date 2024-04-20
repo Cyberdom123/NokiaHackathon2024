@@ -18,10 +18,11 @@ module dot_prod
         output o_valid
     );
     
-    wire [DATA_WIDTH_IN+2-1:0] w_prod_0 [N_IN];
+    // wire [DATA_WIDTH_IN+2-1:0] w_prod_0 [N_IN];
     wire [2*(DATA_WIDTH_IN+2)-1:0] w_prod_1 [N_IN/2];
     wire [2*(DATA_WIDTH_IN+2):0] w_sum [N_IN/4];
     wire [2*(DATA_WIDTH_IN+2)+1:0]  w_data;
+    wire [2*(DATA_WIDTH_IN+2)+1:0]  w_data_prod;
     
     reg [DATA_WIDTH_OUT-1:0] r_data_out = 0;
     reg  r_valid = 0;
@@ -29,17 +30,17 @@ module dot_prod
     genvar i;
 
     
-    // Multiplication stage 0
-    generate
-        for(i=0;i<N_IN;i++) begin: multiplication_stage_0
-            assign w_prod_0[i] = i_data[i] * 3;
-        end
-    endgenerate
+    // // Multiplication stage 0
+    // generate
+    //     for(i=0;i<N_IN;i++) begin: multiplication_stage_0
+    //         assign w_prod_0[i] = i_data[i] * 3;
+    //     end
+    // endgenerate
     
      // Multiplication stage 1 
     generate
         for(i=0;i<N_IN/2;i++) begin: multiplication_stage_1
-            assign w_prod_1[i] = w_prod_0[2*i] * w_prod_0[2*i+1];
+            assign w_prod_1[i] = i_data[i] * i_data[i + 4];
         end
     endgenerate
     
@@ -52,13 +53,14 @@ module dot_prod
     
     // Addiiton stage 1
     assign w_data = w_sum[0] + w_sum[1];
+    assign w_data_prod = 9 * w_data;
     
     // Zero padding the output
     always@(posedge i_clk) begin
         if(i_rst)
             r_data_out <= '0;
         else
-            r_data_out <= w_data;  
+            r_data_out <= w_data_prod;  
     end
     
     assign o_data = r_data_out;

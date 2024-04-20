@@ -13,7 +13,7 @@ module tb_top;
 //`define TASK_7
 //`define TASK_8
 //`define TASK_9
-//`define TASK_10
+`define TASK_10
 //`define TASK_11
 //`define TASK_12
 //`define TASK_13
