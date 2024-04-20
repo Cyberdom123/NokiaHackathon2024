@@ -16,11 +16,24 @@ module digital_circuit #(
         output logic o_valid,
         output logic [DATA_WIDTH_OUT-1:0] o_data
     );
-  
-    
-    always @(posedge i_clk) begin
-        o_data <= 1;      // Just a dummy assignement. Replace with your code.
-        o_valid <= i_valid; // Just a dummy assignement. Replace with your code.
+
+    reg [DATA_WIDTH_OUT-1:0]accumulated=0;
+
+    always @(posedge i_clk)
+    begin
+        if(i_rst)
+        begin
+            accumulated<=0;
+        end else
+        begin
+            if(i_valid)
+            begin
+                accumulated<=accumulated+i_data;
+            end
+        end
     end
+  
+    assign o_valid = i_valid;
+    assign o_data = accumulated >> 1;
 endmodule
 
