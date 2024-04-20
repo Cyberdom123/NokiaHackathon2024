@@ -5,7 +5,7 @@ module tb_top;
 
 // SET YOUR TASK HERE!
 `define TASK_1
-//`define TASK_2
+`define TASK_2
 //`define TASK_3
 //`define TASK_4
 `define TASK_5
