@@ -87,7 +87,7 @@ localparam task_enabler enable = '{
                                   task3 :  1'd0,
                                   task4 :  1'd0,
                                   task5 :  1'd0,
-                                  task6 :  1'd0,
+                                  task6 :  1'd1,
                                   task7 :  1'd0,
                                   task8 :  1'd0,
 
