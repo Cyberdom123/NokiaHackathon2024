@@ -166,6 +166,7 @@ proc checkRequiredFiles { origin_dir} {
   set status true
   set files [list \
  "[file normalize "$origin_dir/../src/pl_controller.vhd"]"\
+ "[file normalize "$origin_dir/../src/task_10/dot_prod.sv"]"\
  "[file normalize "$origin_dir/../src/task_5/ALGORITHM.v"]"\
  "[file normalize "$origin_dir/../src/task_6/Algorithm.v"]"\
  "[file normalize "$origin_dir/../src/task_6/Filter_block.v"]"\
@@ -194,7 +195,6 @@ proc checkRequiredFiles { origin_dir} {
  "[file normalize "$origin_dir/../src/task_3/delay.sv"]"\
  "[file normalize "$origin_dir/../src/task_3/delay_echo.sv"]"\
  "[file normalize "$origin_dir/../src/task_2/digital_circuit.sv"]"\
- "[file normalize "$origin_dir/../src/task_10/dot_prod.sv"]"\
  "[file normalize "$origin_dir/../src/task_9/network_xor.sv"]"\
  "[file normalize "$origin_dir/../src/task_9/network_xor_wrapper.sv"]"\
  "[file normalize "$origin_dir/../src/task_8/neuron.sv"]"\
