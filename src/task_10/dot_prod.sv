@@ -20,7 +20,7 @@ module dot_prod
     
     // wire [DATA_WIDTH_IN+2-1:0] w_prod_0 [N_IN];
     wire [2*(DATA_WIDTH_IN+2)-1:0] w_prod_1 [N_IN/2];
-    wire [2*(DATA_WIDTH_IN+2):0] w_sum [N_IN/4];
+    // wire [2*(DATA_WIDTH_IN+2):0] w_sum [N_IN/4];
     wire [2*(DATA_WIDTH_IN+2)+1:0]  w_data;
     wire [2*(DATA_WIDTH_IN+2)+1:0]  w_data_prod;
     
