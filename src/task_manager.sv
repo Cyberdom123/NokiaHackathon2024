@@ -84,7 +84,7 @@ typedef struct packed {
 localparam task_enabler enable = '{
                                   task1 :  1'd1,
                                   task2 :  1'd1,
-                                  task3 :  1'd0,
+                                  task3 :  1'd1,
                                   task4 :  1'd0,
                                   task5 :  1'd1,
                                   task6 :  1'd0,
