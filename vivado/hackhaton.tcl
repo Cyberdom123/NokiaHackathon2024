@@ -173,6 +173,7 @@ proc checkRequiredFiles { origin_dir} {
  "[file normalize "$origin_dir/../src/task_5/Rotation_Cell_7.v"]"\
  "[file normalize "$origin_dir/../src/task_5/Rotation_Cell_8.v"]"\
  "[file normalize "$origin_dir/../src/axi_mm_master.v"]"\
+ "[file normalize "$origin_dir/../src/task_6/filter.v"]"\
  "[file normalize "$origin_dir/../src/sync_fifo.v"]"\
  "[file normalize "$origin_dir/../src/sync_fifo_asymm.v"]"\
  "[file normalize "$origin_dir/../src/task_6/DUT.sv"]"\
@@ -431,6 +432,7 @@ set files [list \
  [file normalize "${origin_dir}/../src/task_5/Rotation_Cell_7.v"] \
  [file normalize "${origin_dir}/../src/task_5/Rotation_Cell_8.v"] \
  [file normalize "${origin_dir}/../src/axi_mm_master.v"] \
+ [file normalize "${origin_dir}/../src/task_6/filter.v"] \
  [file normalize "${origin_dir}/../src/sync_fifo.v"] \
  [file normalize "${origin_dir}/../src/sync_fifo_asymm.v"] \
  [file normalize "${origin_dir}/../src/task_6/DUT.sv"] \
