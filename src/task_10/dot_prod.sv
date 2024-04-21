@@ -44,15 +44,15 @@ module dot_prod
         end
     endgenerate
     
-    // Addiiton stage 0
-    generate
-        for(i=0;i<N_IN/4;i++) begin: addition_stage_0
-            assign w_sum[i] = w_prod_1[2*i] + w_prod_1[2*i+1];
-        end
-    endgenerate
+    // // Addiiton stage 0
+    // generate
+    //     for(i=0;i<N_IN/4;i++) begin: addition_stage_0
+    //         assign w_sum[i] = w_prod_1[2*i] + w_prod_1[2*i+1];
+    //     end
+    // endgenerate
     
     // Addiiton stage 1
-    assign w_data = w_sum[0] + w_sum[1];
+    assign w_data = w_prod_1[0] + w_prod_1[1] + w_prod_1[2] + w_prod_1[3];
     assign w_data_prod = 9 * w_data;
     
     // Zero padding the output
